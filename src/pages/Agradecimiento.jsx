@@ -22,8 +22,7 @@ const Agradecimiento = () => {
           color: "#1C1C1C",
           fontSize: {
             xs: "2rem",
-            sm: "3rem",
-            md: "4rem",
+            md: "2.25rem",
           },
         }}
       >
@@ -38,7 +37,6 @@ const Agradecimiento = () => {
           color: "#333",
           fontSize: {
             xs: "1rem",
-            sm: "1.25rem",
             md: "1.5rem",
           },
         }}
@@ -56,7 +54,6 @@ const Agradecimiento = () => {
           marginBottom: 3,
           fontSize: {
             xs: "1.25rem",
-            sm: "1.75rem",
             md: "3rem",
           },
         }}
@@ -69,7 +66,7 @@ const Agradecimiento = () => {
         src={Argentina}
         alt="Bandera Argentina"
         sx={{
-          maxWidth: { xs: "200px", md: "430px" },
+          maxWidth: { xs: "200px", md: "300px" },
           height: "auto",
         }}
       />

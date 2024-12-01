@@ -12,7 +12,13 @@ import NotFound from "../pages/404";
 
 const Main = () => {
   return (
-    <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+    <Box
+      sx={{
+        flex: 1,
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="productos" element={<Productos />} />
