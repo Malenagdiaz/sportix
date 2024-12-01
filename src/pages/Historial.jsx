@@ -43,18 +43,24 @@ const Historial = () => {
   }, [user, navigate]);
 
   return (
-    <Box sx={{ padding: 3 }}>
+    <Box
+      sx={{
+        padding: 3,
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Typography
         variant="h4"
         gutterBottom
-        align="center"
-        sx={{ fontWeight: 600 }}
+        sx={{ fontWeight: 600, textAlign: "center" }}
       >
         Historial de compras
       </Typography>
 
       {!user ? (
-        <Typography variant="body1" align="center">
+        <Typography variant="body1" sx={{ textAlign: "left" }}>
           Debes estar logeado para ver tu historial de compras.
         </Typography>
       ) : historial.length > 0 ? (
@@ -127,7 +133,7 @@ const Historial = () => {
           </Card>
         ))
       ) : (
-        <Typography variant="body1" align="center">
+        <Typography variant="body1" sx={{ textAlign: "center" }}>
           No tienes compras registradas.
         </Typography>
       )}

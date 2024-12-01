@@ -30,41 +30,40 @@ const Productos = () => {
     ...new Set(products.map((product) => product.Categoría)),
   ];
 
-  if (isLoading) {
-    return (
-      <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
-        sx={{ marginTop: 2 }}
-      >
-        <CircularProgress />
-        <Typography variant="h6" component="p" sx={{ marginTop: 1 }}>
-          Cargando productos...
-        </Typography>
-      </Grid>
-    );
-  }
-
   return (
-    <Box>
-      <Grid container justifyContent="flex-end">
+    <Box sx={{ position: "relative", minHeight: "100vh" }}>
+      {isLoading && (
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            textAlign: "center",
+            zIndex: 999,
+          }}
+        >
+          <CircularProgress sx={{ color: "#1C1C1C" }} />
+          <Typography
+            variant="h6"
+            component="p"
+            sx={{ marginTop: 1, color: "#1C1C1C" }}
+          >
+            Cargando productos...
+          </Typography>
+        </Box>
+      )}
+
+      {/* Filtro de productos */}
+      <Grid container justifyContent="flex-end" sx={{ marginTop: "20px" }}>
         <FormControl
           sx={{
             width: "230px",
             marginRight: "15px",
-            marginTop: "20px",
             backgroundColor: "white",
             borderColor: "#1C1C1C",
             borderRadius: "8px",
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            "&:hover": {
-              borderColor: "#1C1C1C",
-            },
-            "&.Mui-focused": {
-              borderColor: "#bfe7f7",
-              boxShadow: "0 0 0 3px rgba(191, 231, 247, 0.5)",
-            },
           }}
           size="small"
         >
@@ -103,6 +102,7 @@ const Productos = () => {
         </FormControl>
       </Grid>
 
+      {/* Productos */}
       <Grid container spacing={4} sx={{ padding: 2 }}>
         {filteredProducts.map((product) => (
           <Grid item xs={12} sm={6} md={4} key={product.id}>

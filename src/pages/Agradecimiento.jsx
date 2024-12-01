@@ -9,8 +9,8 @@ const Agradecimiento = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "100vh",
-        padding: 2,
+        paddingTop: "20px",
+        paddingBottom: "20px",
       }}
     >
       <Typography
@@ -20,22 +20,33 @@ const Agradecimiento = () => {
           marginBottom: 2,
           textAlign: "center",
           color: "#1C1C1C",
-          fontSize: "4rem",
+          fontSize: {
+            xs: "2rem",
+            sm: "3rem",
+            md: "4rem",
+          },
         }}
       >
         ¡Gracias por visitar SPORTIX!
       </Typography>
+
       <Typography
         variant="h5"
         sx={{
           marginBottom: 3,
           textAlign: "center",
           color: "#333",
+          fontSize: {
+            xs: "1rem",
+            sm: "1.25rem",
+            md: "1.5rem",
+          },
         }}
       >
         Esperamos que hayas disfrutado explorando cada rincón de nuestra sección
         de fútbol.
       </Typography>
+
       <Typography
         variant="h4"
         sx={{
@@ -43,6 +54,11 @@ const Agradecimiento = () => {
           textAlign: "center",
           color: "#6aa3da",
           marginBottom: 3,
+          fontSize: {
+            xs: "1.25rem",
+            sm: "1.75rem",
+            md: "3rem",
+          },
         }}
       >
         ¡VAMOS ARGENTINA!
@@ -53,9 +69,8 @@ const Agradecimiento = () => {
         src={Argentina}
         alt="Bandera Argentina"
         sx={{
-          width: "430px",
+          maxWidth: { xs: "200px", md: "430px" },
           height: "auto",
-          marginBottom: 3,
         }}
       />
     </Box>

@@ -49,12 +49,14 @@ const Carrito = () => {
               <Box
                 sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}
               >
-                <Typography sx={{ fontSize: "15px" }}>{item.Nombre}</Typography>
+                <Typography sx={{ fontSize: "0.9375rem" }}>
+                  {item.Nombre}
+                </Typography>
 
-                <Typography sx={{ fontSize: "15px" }}>
+                <Typography sx={{ fontSize: "0.9375rem" }}>
                   Cantidad: {item.quantity}
                 </Typography>
-                <Typography sx={{ fontSize: "15px" }}>
+                <Typography sx={{ fontSize: "0.9375rem" }}>
                   Precio: ${item.Precio}
                 </Typography>
               </Box>

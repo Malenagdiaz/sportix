@@ -25,7 +25,8 @@ const CompraFinalizada = ({ open, onClose }) => {
           backgroundColor: "#DADDD8",
           padding: 3,
           borderRadius: 2,
-          width: "500px",
+          width: { xs: "90%", sm: "500px" }, // Ajusta el ancho según el tamaño de pantalla
+          maxWidth: "600px", // Máximo ancho en pantallas grandes
           height: "250px",
           display: "flex",
           gap: "10px",
@@ -33,6 +34,7 @@ const CompraFinalizada = ({ open, onClose }) => {
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
+          margin: "auto", // Asegura que se mantenga centrado
         }}
       >
         <Typography

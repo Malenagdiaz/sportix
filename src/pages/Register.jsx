@@ -55,7 +55,9 @@ const Register = () => {
   return (
     <Container
       sx={{
-        mt: "100px",
+        mt: { xs: "60px", md: "100px" },
+        mb: { xs: "60px", md: "100px" },
+        maxWidth: { xs: "90%" },
         backgroundColor: "#EEF0F2",
         borderRadius: "10px",
         padding: "20px",
