@@ -21,7 +21,7 @@ import { TbShoppingCartHeart } from "react-icons/tb";
 import { GiShoppingBag } from "react-icons/gi";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import { ProductsContext } from "../context/ProductContext";
+import { ProductsContext } from "../context/ProductsContext";
 import { getAuth, signOut } from "firebase/auth";
 import Carrito from "../pages/Carrito";
 

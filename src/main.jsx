@@ -1,14 +1,21 @@
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import App from "./App";
+import { CssBaseline } from "@mui/material";
 import { BrowserRouter } from "react-router-dom";
-import theme from "./theme/ThemeProvider.jsx";
+import { ProductsProvider } from "./context/ProductsContext";
+import { AuthProvider } from "./context/AuthContext";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme/ThemeProvider";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <App />
-    </ThemeProvider>
+    <ProductsProvider>
+      <AuthProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <App />
+        </ThemeProvider>
+      </AuthProvider>
+    </ProductsProvider>
   </BrowserRouter>
 );
