@@ -152,11 +152,17 @@ const ProductosDetalles = () => {
             </Box>
           </CardContent>
 
-          <Box sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: 2,
+              mb: { xs: "20px" },
+            }}
+          >
             <Button
               variant="contained"
               sx={{
-                mb: { xs: "26px" },
                 padding: "10px",
                 fontSize: "1rem",
                 background: "linear-gradient(45deg, #3b97d2, #bfe7f7)",

@@ -54,7 +54,14 @@ const Checkout = () => {
   };
 
   return (
-    <Container sx={{ padding: 3 }}>
+    <Container
+      sx={{
+        padding: 3,
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Container
         sx={{
           padding: 3,
