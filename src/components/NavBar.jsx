@@ -25,7 +25,7 @@ import { ProductsContext } from "../context/ProductContext";
 import { getAuth, signOut } from "firebase/auth";
 import Carrito from "../pages/Carrito";
 
-export const NavBar = () => {
+const NavBar = () => {
   const { user } = useContext(AuthContext);
   const { cart } = useContext(ProductsContext);
   const [menuElement, setMenuElement] = useState(null);
@@ -249,3 +249,5 @@ export const NavBar = () => {
     </Box>
   );
 };
+
+export default NavBar;
